@@ -1,14 +1,22 @@
+// 🎵 Play/Pause Button
 const music = document.getElementById('music');
-const btn = document.getElementById('playPause');
-btn.addEventListener('click', () => {
+const playPauseBtn = document.getElementById('playPause');
+playPauseBtn.onclick = function () {
   if (music.paused) {
     music.play();
-    btn.textContent = '⏸️';
+    playPauseBtn.textContent = '⏸️';
   } else {
     music.pause();
-    btn.textContent = '▶️';
+    playPauseBtn.textContent = '▶️';
   }
+};
+
+// 🎚️ Volume Control
+document.getElementById('volume').addEventListener('input', (e) => {
+  music.volume = e.target.value;
 });
+
+// ❤️ Floating Hearts
 setInterval(() => {
   const heart = document.createElement('div');
   heart.classList.add('heart');
@@ -16,9 +24,8 @@ setInterval(() => {
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 5000);
 }, 500);
-document.getElementById('volume').addEventListener('input', (e) => {
-  document.getElementById('music').volume = e.target.value;
-});
+
+// 🎉 Popup Message
 window.onload = () => {
   alert('🎉 Happy Birthday Almas 🌹\nWith Love, Pyro Blaze ❤️');
 };
