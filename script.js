@@ -19,3 +19,6 @@ setInterval(() => {
 document.getElementById('volume').addEventListener('input', (e) => {
   document.getElementById('music').volume = e.target.value;
 });
+window.onload = () => {
+  alert('🎉 Happy Birthday Almas 🌹\nWith Love, Pyro Blaze ❤️');
+};
