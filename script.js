@@ -31,7 +31,7 @@ function startMusic() {
   Swal.fire({
     title: '🎉 Happy Birthday Almas 🌹',
     text: 'With Love, Pyro Blaze ❤️',
-    imageUrl: 'https://i.imgur.com/lzYKYPa.png',
+    imageUrl: 'https://pin.it/329lYStrL.png',
     imageWidth: 100,
     imageHeight: 100,
     confirmButtonText: '🥰 Start the Surprise!'
@@ -40,4 +40,3 @@ function startMusic() {
   });
   document.body.onclick = null; // disable further clicks to re-trigger popup
 }
-
