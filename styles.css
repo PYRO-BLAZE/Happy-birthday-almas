@@ -67,3 +67,12 @@ body {
   object-fit: cover;
   filter: brightness(0.7); /* Optional: darken video slightly for text readability */
 }
+.glow {
+  font-size: 3em;
+  text-shadow: 0 0 15px #ffb6c1, 0 0 30px #ff69b4, 0 0 45px #ff1493;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%,100% { text-shadow: 0 0 10px #ffb6c1; }
+  50% { text-shadow: 0 0 30px #ff69b4; }
+}
