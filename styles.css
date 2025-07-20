@@ -1,3 +1,4 @@
+/* 🌸 General Styling */
 body {
   margin: 0;
   padding: 0;
@@ -9,6 +10,7 @@ body {
   position: relative;
 }
 
+/* 🎥 Background Video */
 #bgVideo {
   position: fixed;
   top: 50%;
@@ -23,6 +25,7 @@ body {
   filter: brightness(0.6) blur(1px);
 }
 
+/* 🌸 Petals & Hearts */
 .petals, .hearts {
   position: fixed;
   width: 100%;
@@ -34,11 +37,12 @@ body {
   position: fixed;
   width: 20px;
   height: 20px;
-  background: url('https://pin.it/329lYStrL.png');
+  background: url('https://i.imgur.com/L7x1bCw.png');
   background-size: cover;
   animation: float 5s linear infinite;
 }
 
+/* 🎉 Birthday Content */
 .container {
   position: absolute;
   top: 50%;
@@ -83,6 +87,7 @@ body {
   50% { transform: translateY(-15px); }
 }
 
+/* 🎵 Buttons */
 #playPause, #volume {
   background: rgba(255, 255, 255, 0.3);
   border: 2px solid;
@@ -104,8 +109,10 @@ body {
   text-shadow: 0 0 5px #fff;
 }
 
+/* ❤️ Floating Animation */
 @keyframes float {
   0% { transform: translateY(0) scale(1); }
   100% { transform: translateY(-100vh) scale(0.5); }
 }
 
+  
