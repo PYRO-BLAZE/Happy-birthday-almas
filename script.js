@@ -16,3 +16,6 @@ setInterval(() => {
   document.body.appendChild(heart);
   setTimeout(() => heart.remove(), 5000);
 }, 500);
+document.getElementById('volume').addEventListener('input', (e) => {
+  document.getElementById('music').volume = e.target.value;
+});
