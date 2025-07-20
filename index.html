@@ -5,24 +5,23 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Happy Birthday Almas 🌹</title>
   <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
-<body>
-  <!-- 🌸 Background Video -->
+<body onclick="startMusic()">
+  <!-- 🎥 Background Video -->
   <video autoplay muted loop id="bgVideo">
-    <source src="204056-923134012.mp4" type="video/mp4">
+    <source src="204056-923134012.mp4" type="video/mp4" />
   </video>
 
-  <!-- 🌸 Floating Petals -->
+  <!-- 🌸 Petals & Hearts -->
   <div class="petals"></div>
-
-  <!-- 🌸 Floating Hearts -->
   <div class="hearts"></div>
 
   <!-- 🎉 Birthday Content -->
   <div class="container">
     <h1 class="glow typewriter">🎉 Happy Birthday Almas Khan ❤️</h1>
     <div class="cake">
-      <img src="https://pin.it/5CPYnWh0x.png" alt="Cake" style="width: 80px;">
+      <img src="https://pin.it/5CPYnWh0x.jpg" alt="Cake" style="width: 80px;">
     </div>
     <button id="playPause">⏸️</button>
     <input type="range" id="volume" min="0" max="1" step="0.01" value="0.5">
@@ -30,10 +29,11 @@
   </div>
 
   <!-- 🎵 Background Music -->
-  <audio id="music" loop autoplay>
+  <audio id="music" loop>
     <source src="Shawn Mendes - Senorita.mp3" type="audio/mpeg" />
   </audio>
 
   <script src="script.js"></script>
 </body>
 </html>
+
