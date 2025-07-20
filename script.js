@@ -1,6 +1,7 @@
-// 🎵 Play/Pause Button
+// 🎵 Music Controls
 const music = document.getElementById('music');
 const playPauseBtn = document.getElementById('playPause');
+
 playPauseBtn.onclick = function () {
   if (music.paused) {
     music.play();
@@ -25,7 +26,18 @@ setInterval(() => {
   setTimeout(() => heart.remove(), 5000);
 }, 500);
 
-// 🎉 Popup Message
-window.onload = () => {
-  alert('🎉 Happy Birthday Almas 🌹\nWith Love, Pyro Blaze ❤️');
-};
+// 🎉 SweetAlert Popup & Music Start
+function startMusic() {
+  Swal.fire({
+    title: '🎉 Happy Birthday Almas 🌹',
+    text: 'With Love, Pyro Blaze ❤️',
+    imageUrl: 'https://i.imgur.com/lzYKYPa.png',
+    imageWidth: 100,
+    imageHeight: 100,
+    confirmButtonText: '🥰 Start the Surprise!'
+  }).then(() => {
+    music.play();
+  });
+  document.body.onclick = null; // disable further clicks to re-trigger popup
+}
+
