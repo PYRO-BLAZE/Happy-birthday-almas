@@ -1,81 +1,38 @@
+/* 🌸 General Styling */
 body {
-  margin:0; padding:0;
-  overflow:hidden;
-  background: linear-gradient(135deg, #f2c1d1, #ffd1c1);
-  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  font-family: 'Segoe UI', 'Segoe UI Emoji', 'Noto Color Emoji', sans-serif;
   color: #fff;
-  text-align:center;
-  height:100vh;
-  position:relative;
+  text-align: center;
+  height: 100vh;
+  position: relative;
 }
-.container {
-  position:absolute; top:50%; left:50%;
-  transform:translate(-50%, -50%);
-  z-index:2;
-}
-.glow {
-  font-size:3em;
-  text-shadow: 0 0 10px #ffd1dc, 0 0 20px #ffaec9, 0 0 30px #ff7fa1;
-  animation: pulse 2s ease-in-out infinite;
-}
-@keyframes pulse {
-  0%,100% { text-shadow: 0 0 10px #ffd1dc,0 0 20px #ffaec9; }
-  50% { text-shadow: 0 0 20px #ffd1dc,0 0 30px #ffaec9; }
-}
-.cake {
-  font-size:4em;
-  margin:20px 0;
-  animation: bounce 1.5s ease infinite;
-}
-@keyframes bounce {
-  0%,100% { transform: translateY(0); }
-  50% { transform: translateY(-15px); }
-}
-#playPause {
-  background: rgba(255,255,255,0.3);
-  border:none;
-  padding:10px 20px;
-  font-size:1.2em;
-  border-radius:20px;
-  cursor:pointer;
-  transition: background .3s;
-}
-#playPause:hover { background: rgba(255,255,255,0.5); }
-.signature {
-  margin-top:30px;
-  font-size:1.2em;
-}
-.petals {
-  position:fixed;
-  width:100%; height:100%;
-  background: url('https://pin.it/npqqebvmp') repeat;
-  animation: drift 20s linear infinite;
-  opacity:0.4;
-  z-index:1;
-}
-@keyframes drift {
-  from { background-position:0 0; }
-  to { background-position:1000px 1000px; }
-}
+
+/* 🎥 Background Video */
 #bgVideo {
   position: fixed;
-  right: 0;
-  bottom: 0;
+  top: 50%;
+  left: 50%;
   min-width: 100%;
   min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
   z-index: 0;
   object-fit: cover;
-  filter: brightness(0.7); /* Optional: darken video slightly for text readability */
+  filter: brightness(0.6) blur(1px);
 }
-.glow {
-  font-size: 3em;
-  text-shadow: 0 0 15px #ffb6c1, 0 0 30px #ff69b4, 0 0 45px #ff1493;
-  animation: pulse 2s ease-in-out infinite;
+
+/* 🌸 Petals & Hearts */
+.petals, .hearts {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
-@keyframes pulse {
-  0%,100% { text-shadow: 0 0 10px #ffb6c1; }
-  50% { text-shadow: 0 0 30px #ff69b4; }
-}
+
 .heart {
   position: fixed;
   width: 20px;
@@ -83,21 +40,35 @@ body {
   background: url('https://i.imgur.com/L7x1bCw.png');
   background-size: cover;
   animation: float 5s linear infinite;
-  z-index: 1;
 }
-@keyframes float {
-  0% { transform: translateY(0) scale(1); }
-  100% { transform: translateY(-100vh) scale(0.5); }
+
+/* 🎉 Birthday Content */
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
 }
-#bgVideo {
-  filter: brightness(0.5) blur(3px);
+
+.glow {
+  font-size: 3em;
+  text-shadow: 0 0 15px #ffb6c1, 0 0 30px #ff69b4, 0 0 45px #ff1493;
+  animation: pulse 2s ease-in-out infinite;
 }
+
+@keyframes pulse {
+  0%, 100% { text-shadow: 0 0 10px #ffb6c1; }
+  50% { text-shadow: 0 0 30px #ff69b4; }
+}
+
 .typewriter {
   overflow: hidden;
   border-right: .15em solid pink;
   white-space: nowrap;
   animation: typing 3s steps(30, end), blink .75s step-end infinite;
 }
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -106,13 +77,41 @@ body {
   from, to { border-color: transparent }
   50% { border-color: pink }
 }
-#playPause {
+
+.cake img {
+  animation: bounce 1.5s ease infinite;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+/* 🎵 Buttons */
+#playPause, #volume {
+  background: rgba(255, 255, 255, 0.3);
   border: 2px solid;
   border-image: linear-gradient(45deg, #ff6ec4, #7873f5) 1;
-  animation: borderMove 5s linear infinite;
+  padding: 10px 20px;
+  font-size: 1.2em;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s, border 1s linear;
 }
-@keyframes borderMove {
-  0% { border-image-slice: 1; }
-  50% { border-image-slice: 2; }
-  100% { border-image-slice: 1; }
+
+#playPause:hover, #volume:hover {
+  background: rgba(255, 255, 255, 0.5);
 }
+
+.signature {
+  margin-top: 30px;
+  font-size: 1.2em;
+  text-shadow: 0 0 5px #fff;
+}
+
+/* ❤️ Floating Animation */
+@keyframes float {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(-100vh) scale(0.5); }
+}
+
