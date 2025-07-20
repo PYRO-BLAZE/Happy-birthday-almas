@@ -25,7 +25,4 @@ setInterval(() => {
   setTimeout(() => heart.remove(), 5000);
 }, 500);
 
-// 🎉 Popup Message
-window.onload = () => {
-  alert('🎉 Happy Birthday Almas 🌹\nWith Love, Pyro Blaze ❤️');
-};
+
